@@ -18,20 +18,20 @@ listint_t *insert_node(listint_t **head, int number)
 	if (new == NULL)
 		return (NULL);
 	tmp = *head;
-	if (tmp->n > number)
-	{
-		new->n = number;
-		new->next = tmp;
-		*head = new;
-		return (new);
-	}
 	for (; tmp != NULL && tmp->n < number;)
 	{
 		prev = tmp;
 		tmp = tmp->next;
 	}
-	new->n = number;
-	prev->next = new;
-	new->next = tmp;
+	if (prev == NULL)
+	{
+		*head = new;
+	}
+	else
+	{
+		new->n = number;
+		prev->next = new;
+		new->next = tmp;
+	}
 	return (new);
 }
