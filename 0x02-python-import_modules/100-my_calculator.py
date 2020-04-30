@@ -12,4 +12,5 @@ if __name__ == "__main__":
     a = sys.argv[1]
     b = sys.argv[3]
     print("{} {} {} = {:d}"
-          .format(sys.argv[1], sys.argv[2], sys.argv[3], sign[sys.argv[2]](int(a), int(b))))
+          .format(sys.argv[1], sys.argv[2], sys.argv[3],
+                  sign[sys.argv[2]](int(a), int(b))))
