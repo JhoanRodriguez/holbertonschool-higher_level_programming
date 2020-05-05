@@ -5,3 +5,6 @@ def no_c(my_string):
         new = new + my_string
         new = new.translate({ord(i): None for i in 'cC'})
         return (new)
+    new = ""
+    new = new + my_string
+    return (new)
