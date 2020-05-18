@@ -6,5 +6,5 @@ def safe_print_list(my_list=[], x=0):
             counter += 1
         print()
     except:
-        print("An error occured, try again")
+        print("An error occurred, try again")
     return counter
