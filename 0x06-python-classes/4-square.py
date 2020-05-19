@@ -5,7 +5,7 @@
 class Square:
     """Class Square"""
     def __init__(self, size=0):
-        """[summary]
+        """Class Square
 
         Keyword Arguments:
             size {int} -- size of square(default: {0})
@@ -21,14 +21,6 @@ class Square:
         else:
             self.__size = size
 
-    def area(self):
-        """area
-
-        Returns:
-            [int] -- area of square
-        """
-        return self.__size * self.__size
-
     @property
     def size(self):
         return self.__size
@@ -36,3 +28,11 @@ class Square:
     @size.setter
     def size(self, value):
         self.__size = value
+
+    def area(self):
+        """area
+
+        Returns:
+            [int] -- area of square
+        """
+        return self.__size * self.__size
