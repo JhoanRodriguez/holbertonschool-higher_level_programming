@@ -1,22 +1,14 @@
 #!/usr/bin/python3
-"""add two numbers"""
+"""
+This module adds two integers and returns sum of two numbers a & b.
+Only accepts integers and floats else TypeError is raised
+This module will convert float to integer
+"""
 
 
 def add_integer(a, b=98):
-    """add two numbers, cast to int and return it.
-
-    Arguments:
-        a {[int, float]} -- number1
-
-    Keyword Arguments:
-        b {int, float} -- number2 (default: {98})
-
-    Raises:
-        TypeError: a must be an integer
-        TypeError: b must be an integer
-
-    Returns:
-        [int] -- return a + b
+    """
+    add_integer: Check input if correct, cast both into ints and return sum
     """
     if not (isinstance(a, (int, float))):
         raise TypeError("a must be an integer")
