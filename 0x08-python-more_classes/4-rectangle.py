@@ -98,4 +98,4 @@ class Rectangle():
         Returns:
             [string] -- Return a representation of string
         """
-        return ("Rectangle({:d},{:d})".format(self.width, self.height))
+        return ("Rectangle({:d}, {:d})".format(self.width, self.height))
