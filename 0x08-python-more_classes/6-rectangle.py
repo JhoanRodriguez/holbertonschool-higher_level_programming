@@ -2,12 +2,13 @@
 """
 Class Rectangle that defines a rectangle
 """
-number_of_instances = 0
 
 
 class Rectangle():
     """Rectangle that defines a rectangle
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Instantiation function
         Keyword Arguments:
@@ -16,7 +17,7 @@ class Rectangle():
         """
         self.width = width
         self.height = height
-        type(self).number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -103,7 +104,7 @@ class Rectangle():
         return ("Rectangle({:d}, {:d})".format(self.width, self.height))
 
     def __del__(self):
-        """Print message for deleted rectangle
+        """Print the message when an instance of Rectangle is deleted
         """
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
