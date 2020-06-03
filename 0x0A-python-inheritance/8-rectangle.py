@@ -33,6 +33,13 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
+"""
+This module contains a class
+with public instance and Raises
+exception when required
+"""
+
+
 class Rectangle(BaseGeometry):
     """Recatangle class inherit from BaseGeometry
 
@@ -40,7 +47,7 @@ class Rectangle(BaseGeometry):
         BaseGeometry class type
     """
     def __init__(self, width, height):
-        """[summary]
+        """instantion of class
 
         Arguments:
             width int
