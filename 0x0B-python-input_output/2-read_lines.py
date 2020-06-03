@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-"""
-This file contains functions that
-reads n lines of a txt file and prints
-it to stdout
-"""
+"""Read n lines
+    """
 
 
 def read_lines(filename="", nb_lines=0):
-    """
-    function that reads n lines
+    """[summary]
+
+    Keyword Arguments:
+        filename str -- name of the file (default: {""})
+        nb_lines int -- number of line to be read (default: {0})
     """
     with open(filename, encoding="UTF-8") as MyFile:
         counter = 0
         if nb_lines <= 0:
-            print(MyFile.read())
+            print(MyFile.read(), end="")
         while counter < nb_lines:
             counter += 1
             line = MyFile.readline()
-            print(line)
+            print(line, end="")
             if not line:
                 break
