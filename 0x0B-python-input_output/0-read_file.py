@@ -10,8 +10,5 @@ def read_file(filename=""):
     This function reads a text file and prints it stdout
     """
     with open(filename, encoding="UTF-8") as MyFile:
-        line = MyFile.readline()
-        while line:
+        for line in MyFile:
             print(line, end="")
-            line = MyFile.readline()
-        print("")
