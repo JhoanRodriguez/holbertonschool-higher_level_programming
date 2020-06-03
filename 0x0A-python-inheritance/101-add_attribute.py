@@ -4,7 +4,7 @@
 
 
 def add_attribute(ob, attr, value):
-    """add an attribute 
+    """add an attribute
 
     Arguments:
         ob dict
