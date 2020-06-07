@@ -1,11 +1,21 @@
 #!/usr/bin/python3
+"""
+This modules contains a class Base
+"""
 import json
 
 
 class Base:
+    """
+    This class has a private attribute __nb_objects = 0
+    a class constructor definition to check for id
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Instantiation of class which checks for id
+        """
         if id is not None:
             self.id = id
         else:
@@ -14,12 +24,21 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+        This functions returns the json string representation
+        of list_dictionaries
+        """
         if list_dictionaries is None:
             return []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        This function writes the json
+        string representation of list_objs
+        to a file
+        """
         filename = cls.__name__ + ".json"
         newlist = []
         if list_objs is None:
@@ -32,12 +51,20 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        This function returns the list
+        of the json string represenation
+        """
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        This function returns an instance
+        with all attributes already set
+        """
         if cls.__name__ == "Rectangle":
             aux = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -47,6 +74,10 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """
+        This function returns a list
+        of instances
+        """
         filename = cls.__name__ + ".json"
         newlist = []
         if cls is None:
