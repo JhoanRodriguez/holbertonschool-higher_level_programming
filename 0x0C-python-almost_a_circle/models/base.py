@@ -28,5 +28,19 @@ class Base:
         with open(filename, "w") as Myfile:
             for item in list_objs:
                 newlist.append(cls.to_dictionary(item))
-
             Myfile.write(cls.to_json_string(newlist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            aux = cls(1, 1)
+        elif cls.__name__ == "Square":
+            aux = cls(1)
+        aux.update(**dictionary)
+        return aux
