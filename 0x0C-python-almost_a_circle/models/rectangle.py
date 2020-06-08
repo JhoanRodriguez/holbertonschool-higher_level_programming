@@ -112,9 +112,9 @@ class Rectangle(Base):
         This function prints in stdout the rectangle
         """
         for item in range(self.y):
-            print(" " * self.y)
+            print()
         for item in range(self.height):
-            print(self.x * " " + "#" * self.width)
+            print((self.x * " ") + ("#" * self.width))
 
     def __str__(self):
         """

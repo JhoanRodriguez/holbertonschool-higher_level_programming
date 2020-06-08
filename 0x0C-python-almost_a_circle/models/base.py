@@ -82,8 +82,11 @@ class Base:
         newlist = []
         if cls is None:
             return newlist
-        with open(filename, "r") as Myfile:
-            newlist = cls.from_json_string(Myfile.read())
-        for item in range(len(newlist)):
-            newlist[item] = cls.create(**newlist[item])
+        try:
+            with open(filename, "r") as Myfile:
+                newlist = cls.from_json_string(Myfile.read())
+            for item in range(len(newlist)):
+                newlist[item] = cls.create(**newlist[item])
+        except Exception:
+            pass
         return newlist
