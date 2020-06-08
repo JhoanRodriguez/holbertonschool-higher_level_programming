@@ -43,10 +43,10 @@ class Base:
         newlist = []
         if list_objs is None:
             cls.to_json_string(list_objs)
-
-        with open(filename, "w") as Myfile:
+        else:
             for item in list_objs:
                 newlist.append(cls.to_dictionary(item))
+        with open(filename, "w") as Myfile:
             Myfile.write(cls.to_json_string(newlist))
 
     @staticmethod
