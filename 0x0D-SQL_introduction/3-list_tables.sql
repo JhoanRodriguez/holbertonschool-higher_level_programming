@@ -1,3 +1,3 @@
--- Write a script that deletes the database hbtn_0c_0 in your MySQL server.
+-- Write a script that lists all the tables of a database in your MySQL server.
 -- using MYSQL server
 SHOW TABLES
