@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import urllib.request as urlreq
+import urllib.request
 """
 Script that fetches https://intranet.hbtn.io/status
 """
 
 if __name__ == "__main__":
-    with urlreq.urlopen('https://intranet.hbtn.io/status') as response:
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
         body = response.read()
     print("Body response:")
     print("\t- type: {}".format(type(body)))
