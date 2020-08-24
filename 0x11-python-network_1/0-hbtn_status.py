@@ -2,10 +2,10 @@
 """
 Script that fetches https://intranet.hbtn.io/status
 """
-import urllib.request
+import urllib.request as urlreq
 
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    with url.req.urlopen('https://intranet.hbtn.io/status') as response:
         body = response.read()
     print("Body response:")
     print("\t- type: {}".format(type(body)))
