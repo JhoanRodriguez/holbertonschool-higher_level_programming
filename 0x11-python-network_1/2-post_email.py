@@ -7,12 +7,12 @@ the body of the response
 
 from sys import argv
 import urllib.request as urlreq
-import urllib.parse as urlparse
+from urllib.parse import urlencode
 
 
 if __name__ == '__main__':
     url = argv[1]
-    data = urlparse({'email': argv[2]})
+    data = urlencode({'email': argv[2]})
     data = data.encode('ascii')
 
     with urlreq.urlopen(url, data) as response:
