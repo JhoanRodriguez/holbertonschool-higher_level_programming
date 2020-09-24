@@ -4,7 +4,7 @@
 const myArgs = process.argv;
 
 if (!myArgs[2]) {
-	console.log('No argument');
+  console.log('No argument');
 } else {
-	console.log(myArgs[2]);
+  console.log(myArgs[2]);
 }
