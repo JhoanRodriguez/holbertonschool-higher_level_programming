@@ -1,5 +1,6 @@
 #!/usr/bin/node
-/* Function that converts a number to another base */
 exports.converter = function (base) {
-
+  return function (newbase) {
+    return newbase.toString(base);
+  };
 };
